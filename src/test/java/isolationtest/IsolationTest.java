@@ -10,7 +10,7 @@ public class IsolationTest {
     @Test
     public void isolationTestCaseOne() {
         sharedResource++;
-        Assertions.assertEquals(sharedResource, 1);
+        Assertions.assertEquals(1, sharedResource);
     }
 
     /**
@@ -19,7 +19,7 @@ public class IsolationTest {
     @Test
     public void isolationTestCaseTwo() {
         sharedResource++;
-        Assertions.assertEquals(sharedResource, 1);
+        Assertions.assertEquals(1, sharedResource);
     }
 
 }
