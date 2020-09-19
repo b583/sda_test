@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class IsolationTest {
 
+    // remove the 'static' keyword to fix the issue
     private static int sharedResource = 0;
 
     @Test
