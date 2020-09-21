@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.Test;
 
-public class AssumeTest {
+class AssumeTest {
 
     @Test
-    public void stoppedByAssumeTest() {
+    void stoppedByAssumeTest() {
         // failed assumption skips tests before failing assertion
         Assumptions.assumeTrue(false);
 

@@ -3,10 +3,10 @@ package exceptiontest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class ExceptionTest {
+class ExceptionTest {
 
     @Test
-    public void exampleExceptionIsThrown() {
+    void exampleExceptionIsThrown() {
         Assertions.assertThrows(ExampleException.class, () -> {
             // tested code
             throw new ExampleException();

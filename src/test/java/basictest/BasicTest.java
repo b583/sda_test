@@ -3,10 +3,10 @@ package basictest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class BasicTest {
+class BasicTest {
 
     @Test
-    public void basicTest() {
+    void basicTest() {
         Assertions.assertTrue(true);
     }
 

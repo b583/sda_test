@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Random;
 
-public class RepeatableTest {
+class RepeatableTest {
 
     @Test
-    public void nonRepeatableTest() {
+    void nonRepeatableTest() {
         Assertions.assertTrue(new Random().nextBoolean());
     }
 
