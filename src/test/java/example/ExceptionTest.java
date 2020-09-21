@@ -13,6 +13,13 @@ class ExceptionTest {
         });
     }
 
+    @Test
+    void exampleExceptionIsNotThrown() {
+        Assertions.assertDoesNotThrow(() -> {
+            // tested code
+        });
+    }
+
     private static class ExampleException extends Exception {
 
     }
