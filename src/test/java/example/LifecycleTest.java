@@ -1,4 +1,4 @@
-package testlifecycle;
+package example;
 
 import org.junit.jupiter.api.*;
 
