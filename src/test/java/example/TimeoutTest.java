@@ -9,16 +9,20 @@ class TimeoutTest {
 
     @Test
     void timeoutWaitingTest() {
-        Assertions.assertTimeout(Duration.ofSeconds(3L), () -> {
-            Thread.sleep(3500);
-        });
+        Assertions.assertTimeout(Duration.ofSeconds(3L), this::aLittleBitTooLongOperation);
+    }
+
+    private void aLittleBitTooLongOperation() throws InterruptedException {
+        Thread.sleep(3500);
     }
 
     @Test
     void timeoutStopTest() {
-        Assertions.assertTimeoutPreemptively(Duration.ofSeconds(3L), () -> {
-            Thread.sleep(600_000);
-        });
+        Assertions.assertTimeoutPreemptively(Duration.ofSeconds(3L), this::aGiantBlockerBugOperation);
+    }
+
+    private void aGiantBlockerBugOperation() throws InterruptedException {
+        Thread.sleep(600_000);
     }
 
 }
