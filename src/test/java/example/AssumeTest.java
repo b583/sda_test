@@ -7,11 +7,15 @@ import org.junit.jupiter.api.Test;
 class AssumeTest {
 
     @Test
-    void stoppedByAssumeTest() {
+    void windowsExclusiveTest() {
         // failed assumption skips tests before failing assertion
-        Assumptions.assumeTrue(false);
+        Assumptions.assumeTrue("WINDOWS".equals(getOS()));
 
         Assertions.assertTrue(false);
+    }
+
+    private String getOS() {
+        return "LINUX";
     }
 
 }
