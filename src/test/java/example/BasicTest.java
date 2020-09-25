@@ -10,7 +10,7 @@ class BasicTest {
         Assertions.assertFalse(getHelloMessage().isEmpty());
     }
 
-    String getHelloMessage() {
+    private String getHelloMessage() {
         return "Hello JUnit!";
     }
 
