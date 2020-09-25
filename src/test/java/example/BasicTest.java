@@ -7,7 +7,11 @@ class BasicTest {
 
     @Test
     void basicTest() {
-        Assertions.assertTrue(true);
+        Assertions.assertFalse(getHelloMessage().isEmpty());
+    }
+
+    String getHelloMessage() {
+        return "Hello JUnit!";
     }
 
 }
