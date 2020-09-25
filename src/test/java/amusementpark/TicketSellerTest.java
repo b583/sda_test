@@ -36,7 +36,6 @@ class TicketSellerTest {
         Assertions.assertFalse(canBuy);
     }
 
-    // note that
     @Test
     @DisplayName(value = "Given visitor can't buy ticket when tries to buy ticket then not allowed")
     void visitorNotAllowedCantBuyTicket() {
