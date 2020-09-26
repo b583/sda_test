@@ -13,6 +13,10 @@ class ReferenceTest {
         Assertions.assertSame(dummyOne, dummyTwo);
     }
 
+    private static class DummyClass {
+
+    }
+
     @Test
     void boxedValueReferenceTest() {
         // see that test succeeds due to Integer using cache for valueOf method
@@ -20,10 +24,6 @@ class ReferenceTest {
         final var int2 = Integer.valueOf(1);
 
         Assertions.assertSame(int1, int2);
-    }
-
-    private static class DummyClass {
-
     }
 
 }
