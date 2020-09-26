@@ -10,7 +10,7 @@ class FailTest {
 
         // test is failed before assertion is reached
         Assertions.fail("Failed by programmer");
-        // to be honest I don't see a use case for this beside not implemented test
+        // if you feel like you need to use it you might have a bad test
 
         // MUST be a success
         Assertions.assertTrue(true);
