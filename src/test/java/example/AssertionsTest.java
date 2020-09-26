@@ -3,6 +3,9 @@ package example;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 class AssertionsTest {
@@ -24,18 +27,18 @@ class AssertionsTest {
 
     @Test
     void testArrays() {
-        // test array content
-        final int[] arrayOne = {1, 2, 3};
-        final int[] arrayTwo = {1, 2, 3};
-        Assertions.assertArrayEquals(arrayOne, arrayTwo);
+        final int[] array = {1, 3, 2};
+        Arrays.sort(array);
+
+        Assertions.assertArrayEquals(new int[] {1, 2, 3}, array);
     }
 
     @Test
     void testIterables() {
-        // test iterable content e.g. lists
-        final var listOne = List.of("A", "B", "C");
-        final var listTwo = List.of("A", "B", "C");
-        Assertions.assertIterableEquals(listOne, listTwo);
+        final var list = new ArrayList<>(List.of("A", "C", "B"));
+        list.sort(Comparator.naturalOrder());
+
+        Assertions.assertIterableEquals(List.of("A", "B", "C"), list);
     }
 
 }
