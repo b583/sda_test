@@ -7,11 +7,22 @@ class BasicTest {
 
     @Test
     void basicTest() {
-        Assertions.assertFalse(getHelloMessage().isEmpty());
+        // arrange
+        final var greeter = new Greeter();
+
+        // act
+        final var msg = greeter.getHelloMessage();
+
+        // assert
+        Assertions.assertFalse(msg.isEmpty());
     }
 
-    private String getHelloMessage() {
-        return "Hello JUnit!";
+    private static class Greeter {
+
+        private String getHelloMessage() {
+            return "Hello JUnit!";
+        }
+
     }
 
 }
